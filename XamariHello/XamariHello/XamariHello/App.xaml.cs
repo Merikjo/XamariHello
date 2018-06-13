@@ -42,24 +42,37 @@ namespace XamariHello
             {
                 Content = new StackLayout
                 {
-                    //VerticalOptions = LayoutOptions.Center,
+                    VerticalOptions = LayoutOptions.Center,
                     Children = {
                         new Label {
                             HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Arvaa luku -peli",
-                            TextColor = Color.Yellow
+                            Text = "Hello Xamarin!",
+                            TextColor = Color.Blue
                         },
                         new Label {
                             HorizontalTextAlignment = TextAlignment.Center,
                             Text = "Sovellusversio 0.10",
                             TextColor = Color.Silver
                         },
+
+                    //Arvaa luku -pelin koodit:
+                        new Label {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = "Arvaa luku -peli",
+                            TextColor = Color.Gray
+                        },
+                        new Label {
+                            HorizontalTextAlignment = TextAlignment.Center,
+                            Text = "Arvaa luku 1 -21 välillä",
+                            TextColor = Color.Silver
+                        },
                         syötekenttä,
                         arvaaNappi,
                         arvauksenTulosLabel
-                    }
+                    }   // Arvaa luku -pelin koodit
                 }
-            };
+                
+            };        
         }
 
         //private async void ArvaaNappi_Clicked(object sender, EventArgs e)
