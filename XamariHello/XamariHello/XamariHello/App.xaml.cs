@@ -35,7 +35,7 @@ namespace XamariHello
             arvauksenTulosLabel.Text = "";
 
             // esimerkki XAML-sivun käytöstä
-            //MainPage = new EkaXamlSivu();
+            //MainPage = new EkaXamlPage();
 
             // The root page of your application
             MainPage = new ContentPage
@@ -71,12 +71,12 @@ namespace XamariHello
                         arvauksenTulosLabel
                     }   // Arvaa luku -pelin koodit
                 }
-                
-            };        
+
+            };
         }
 
-        //private async void ArvaaNappi_Clicked(object sender, EventArgs e)
-        private void ArvaaNappi_Clicked(object sender, EventArgs e)
+        private async void ArvaaNappi_Clicked(object sender, EventArgs e)
+        //private void ArvaaNappi_Clicked(object sender, EventArgs e)
         {
             int arvaus = int.Parse(syötekenttä.Text);
             if (arvaus < oikeaLuku)
@@ -95,13 +95,17 @@ namespace XamariHello
                 Random rnd = new Random();
                 oikeaLuku = rnd.Next(1, 21);
 
-                //HttpClient webClient = new HttpClient();
+            //HttpClient webClient = new HttpClient();
                 //string url = "http://localhost:2440/home/TallennaEnnatys/" + arvaustenLukumäärä;
+
+                //string url = "https://xamarinhellodata.azurewebsites.net/arvauskerta/Create/" + arvaustenLukumäärä;
                 //string jsonVastaus = await webClient.GetStringAsync(url); //await = viittaus asynkroniseen metodiin GetStrinAsync
 
-                arvaustenLukumäärä = 0;
+                //arvaustenLukumäärä = 0;
             }
         }
+
+   
 
         protected override void OnStart()
         {

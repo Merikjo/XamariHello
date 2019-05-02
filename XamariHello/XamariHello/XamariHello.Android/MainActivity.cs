@@ -1,11 +1,11 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace XamariHello.Droid
 {
